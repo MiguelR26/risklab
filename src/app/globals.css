@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg:#F8F7F4; --fg:#172723; --card:#FFFFFF; --muted:#566660; --line:#E3E1DA; --accent:#3C806D; --accent-fg:#FFFFFF; }
+.dark { --bg:#0F1916; --fg:#EDEFEA; --card:#172723; --muted:#9DB0A9; --line:#2A3B36; --accent:#5FB59D; --accent-fg:#0F1916; }
+body { background: var(--bg); color: var(--fg); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
