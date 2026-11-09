@@ -30,7 +30,6 @@ export function Evaluations() {
           </div>
         );
       })}
-      <p className="text-sm text-muted">Los cuestionarios de los demás módulos se publicarán junto con sus lecciones.</p>
     </div>
   );
 }

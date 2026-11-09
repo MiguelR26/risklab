@@ -51,7 +51,7 @@ export function RiskMatrix() {
                     <button key={prob} aria-pressed={isI}
                       aria-label={`Probabilidad ${prob}, impacto ${impact}, puntaje ${s}, nivel ${lv.name}${isI ? ", riesgo inherente" : ""}${isR ? ", riesgo residual" : ""}`}
                       onClick={() => { setP(prob); setI(impact); }}
-                      className={cn("flex h-12 w-12 flex-col items-center justify-center rounded-md border border-transparent font-medium sm:h-14 sm:w-14", lv.cls, (isI || isR) && "border-fg")}>
+                      className={cn("flex h-12 w-full flex-col items-center justify-center rounded-md border border-transparent font-medium sm:h-14 sm:w-full", lv.cls, (isI || isR) && "border-fg")}>
                       <span>{s}</span>
                       <span className="text-[10px] font-bold">{isI && "Inh"}{isI && isR && "·"}{isR && "Res"}</span>
                     </button>

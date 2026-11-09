@@ -7,6 +7,7 @@ export type Block =
   | { t: "business"; text: string }
   | { t: "callout"; title: string; text: string }
   | { t: "interview"; text: string } // solo en la ruta de entrevista
+  | { t: "code"; text: string }
   | { t: "matrix" }
   | { t: "case"; caseId: string };
 

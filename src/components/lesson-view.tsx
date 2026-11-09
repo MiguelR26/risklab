@@ -28,6 +28,7 @@ function BlockView({ b, route }: { b: Block; route: Route | null }) {
     case "business": return <Note label="Ahora, en una empresa">{b.text}</Note>;
     case "callout": return <Note label={b.title}>{b.text}</Note>;
     case "interview": return route === "entrevista" ? <Note label="En la entrevista" accent>{b.text}</Note> : null;
+    case "code": return <pre className="overflow-x-auto rounded-xl border border-line bg-card p-4 text-sm leading-6"><code>{b.text}</code></pre>;
     case "matrix": return <RiskMatrix />;
     case "case": return <CaseSimulator caseId={b.caseId} />;
   }
@@ -53,7 +54,7 @@ export function LessonView({ courseTitle, lesson, id, prev, next }: { courseTitl
         <Button variant={done ? "outline" : "primary"} onClick={toggle} aria-pressed={done}>
           {done ? "Completada ✓ (desmarcar)" : "Marcar como completada"}
         </Button>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {prev && <Link href={prev.href} className={btn("outline")}>← {prev.title}</Link>}
           {next && <Link href={next.href} className={btn("outline")}>{next.title} →</Link>}
         </div>

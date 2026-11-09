@@ -1,4 +1,5 @@
 import type { Course, Lesson } from "./types";
+import { mageritLessons, alternosLessons, excelLessons, sqlLessons } from "./lessons-extra";
 
 export const courses: Course[] = [
   {
@@ -55,10 +56,10 @@ export const courses: Course[] = [
       },
     ],
   },
-  { slug: "magerit", title: "MAGERIT", description: "Metodología de análisis y gestión de riesgos de sistemas de información.", lessons: [] },
-  { slug: "alternos-dmaic", title: "Procesos alternos y DMAIC", description: "Contingencias operativas y mejora continua con datos.", lessons: [] },
-  { slug: "excel", title: "Excel aplicado a riesgos", description: "Fórmulas, filtros y tablas dinámicas para analizar incidentes.", lessons: [] },
-  { slug: "sql-der", title: "SQL y DER", description: "Consultas básicas y modelado de datos.", lessons: [] },
+  { slug: "magerit", title: "MAGERIT", description: "Metodología de análisis y gestión de riesgos de sistemas de información.", lessons: mageritLessons },
+  { slug: "alternos-dmaic", title: "Procesos alternos y DMAIC", description: "Contingencias operativas y mejora continua con datos.", lessons: alternosLessons },
+  { slug: "excel", title: "Excel aplicado a riesgos", description: "Fórmulas, filtros y tablas dinámicas para analizar incidentes.", lessons: excelLessons },
+  { slug: "sql-der", title: "SQL y DER", description: "Consultas básicas y modelado de datos.", lessons: sqlLessons },
 ];
 
 export const lessonId = (courseSlug: string, lesson: Lesson) => `${courseSlug}/${lesson.slug}`;
